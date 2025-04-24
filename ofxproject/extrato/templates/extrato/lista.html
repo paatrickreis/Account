@@ -7,7 +7,7 @@
     <h1>Transações</h1>
     <ul>
         {% for t in transacoes %}
-            <li>{{ t.data }} - {{ t.descricao }} - R$ {{ t.valor }}</li>
+            <li>{{ t.data }} - {{ t.descricao }} - R$ {{ t.valor }} ({{ t.extrato.conta }})</li>
         {% empty %}
             <li>Nenhuma transação encontrada.</li>
         {% endfor %}

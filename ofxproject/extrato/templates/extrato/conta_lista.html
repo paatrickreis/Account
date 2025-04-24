@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contas</title>
+</head>
+<body>
+    <h1>Lista de Contas</h1>
+    <ul>
+        {% for conta in contas %}
+            <li>{{ conta.cliente.nome }} - {{ conta.banco }} - {{ conta.agencia }}/{{ conta.numero }}</li>
+        {% empty %}
+            <li>Nenhuma conta cadastrada.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
